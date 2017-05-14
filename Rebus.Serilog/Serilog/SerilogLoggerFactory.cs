@@ -86,11 +86,11 @@ namespace Rebus.Serilog
                 var exception = ExtractException(objs);
                 if (exception == null)
                 {
-                    _logger.Warning(message, objs);
+                    _logger.Error(message, objs);
                 }
                 else
                 {
-                    _logger.Warning(exception, message, objs);
+                    _logger.Error(exception, message, objs);
                 }
             }
 
